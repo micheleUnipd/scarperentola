@@ -1,0 +1,231 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://SfondoLivello2.png" type="Texture" id=1]
+[ext_resource path="res://Sandalo_1_1.png" type="Texture" id=2]
+[ext_resource path="res://Sandalo_3_2.png" type="Texture" id=3]
+[ext_resource path="res://Livello4.gd" type="Script" id=4]
+[ext_resource path="res://Top_Menu_Bar_Style.tres" type="DynamicFont" id=5]
+[ext_resource path="res://0 - main menu/moneta.png" type="Texture" id=6]
+[ext_resource path="res://0 - main menu/cuore.png" type="Texture" id=7]
+[ext_resource path="res://0 - main menu/top_menu_bar.png" type="Texture" id=8]
+[ext_resource path="res://1 - gioco cestino/icona_esci.png" type="Texture" id=9]
+[ext_resource path="res://1 - gioco cestino/icona_pausa.png" type="Texture" id=10]
+[ext_resource path="res://Sandalo_3_1.png" type="Texture" id=11]
+[ext_resource path="res://Sandalo_2_1.png" type="Texture" id=12]
+[ext_resource path="res://Sandalo_1_2.png" type="Texture" id=13]
+[ext_resource path="res://Rettangolo.png" type="Texture" id=14]
+[ext_resource path="res://Sandalo_2_2.png" type="Texture" id=15]
+[ext_resource path="res://GameInfo.gd" type="Script" id=16]
+[ext_resource path="res://IconaLivello1OK.png" type="Texture" id=17]
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=18]
+[ext_resource path="res://Forziere.png" type="Texture" id=19]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 18 )
+
+[node name="Livello4" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+position = Vector2( 517.918, 298.291 )
+scale = Vector2( 0.425286, 0.316898 )
+texture = ExtResource( 1 )
+
+[node name="Sandalo" type="Sprite" parent="."]
+position = Vector2( 286.573, 495.795 )
+scale = Vector2( 0.732286, 0.7212 )
+texture = ExtResource( 17 )
+
+[node name="Sandalo_1" type="Sprite" parent="."]
+position = Vector2( 673.304, 371.777 )
+texture = ExtResource( 2 )
+
+[node name="Sandalo_2" type="Sprite" parent="."]
+position = Vector2( 680.492, 193.006 )
+texture = ExtResource( 13 )
+
+[node name="Sandalo_3" type="Sprite" parent="."]
+position = Vector2( 811.895, 196.891 )
+texture = ExtResource( 15 )
+
+[node name="Sandalo_4" type="Sprite" parent="."]
+position = Vector2( 679.233, 291.385 )
+texture = ExtResource( 12 )
+
+[node name="Sandalo_5" type="Sprite" parent="."]
+position = Vector2( 819.455, 293.49 )
+texture = ExtResource( 11 )
+
+[node name="Sandalo_6" type="Sprite" parent="."]
+position = Vector2( 824.124, 373.987 )
+texture = ExtResource( 3 )
+
+[node name="Rettangolo_1_1" type="Sprite" parent="."]
+position = Vector2( 222.869, 167.786 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 14 )
+
+[node name="Rettangolo_2_1" type="Sprite" parent="."]
+position = Vector2( 222.869, 255.98 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 14 )
+
+[node name="Rettangolo_3_1" type="Sprite" parent="."]
+position = Vector2( 222.87, 344.175 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 14 )
+
+[node name="Rettangolo_1_2" type="Sprite" parent="."]
+position = Vector2( 369.02, 167.786 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 14 )
+
+[node name="Rettangolo_2_2" type="Sprite" parent="."]
+position = Vector2( 369.02, 255.98 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 14 )
+
+[node name="Rettangolo_3_3" type="Sprite" parent="."]
+position = Vector2( 369.02, 344.175 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 14 )
+
+[node name="Forziere" type="Sprite" parent="."]
+position = Vector2( 986.518, 35.278 )
+scale = Vector2( 0.123, 0.103 )
+texture = ExtResource( 19 )
+
+[node name="Vittoria" type="Label" parent="."]
+margin_left = 483.26
+margin_top = 205.268
+margin_right = 837.26
+margin_bottom = 300.268
+custom_fonts/font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prosegui" type="Button" parent="."]
+visible = false
+margin_left = 428.702
+margin_top = 460.64
+margin_right = 642.702
+margin_bottom = 537.64
+text = "PROSEGUI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameInfo" type="AcceptDialog" parent="."]
+visible = true
+margin_left = 306.995
+margin_top = 164.317
+margin_right = 751.995
+margin_bottom = 406.317
+window_title = "Informazioni sul gioco"
+dialog_text = "Aiuta Scarperentola a ricomporre l'immagine originale.
+Trascina i frammenti nelle posizioni giuste.
+
+BUONA FORTUNA !!!"
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top_Menu_Bar" type="Sprite" parent="."]
+position = Vector2( 532.576, 54.1766 )
+scale = Vector2( 0.550775, 0.6 )
+texture = ExtResource( 8 )
+
+[node name="Tempo" type="Label" parent="."]
+margin_left = 353.329
+margin_top = 32.3413
+margin_right = 487.329
+margin_bottom = 72.3413
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+text = "15 : 20 : 53"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vita1" type="Sprite" parent="."]
+position = Vector2( 568.329, 50.2819 )
+texture = ExtResource( 7 )
+
+[node name="Vite" type="Label" parent="."]
+margin_left = 598.329
+margin_top = 28.4008
+margin_right = 611.329
+margin_bottom = 63.4008
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.921569, 0.0313726, 0.0313726, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Moneta" type="Sprite" parent="."]
+position = Vector2( 661.661, 50.3968 )
+texture = ExtResource( 6 )
+
+[node name="Monete" type="Label" parent="."]
+margin_left = 691.329
+margin_top = 27.3413
+margin_right = 704.329
+margin_bottom = 62.3413
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.627451, 0.619608, 0.0509804, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 792.079
+margin_top = 27.9206
+margin_right = 900.079
+margin_bottom = 82.9206
+toggle_mode = true
+icon = ExtResource( 9 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 165.538
+margin_top = 27.1409
+margin_right = 273.538
+margin_bottom = 82.1409
+toggle_mode = true
+icon = ExtResource( 10 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alert" type="ConfirmationDialog" parent="."]
+margin_left = 348.85
+margin_top = 199.649
+margin_right = 719.85
+margin_bottom = 350.649
+window_title = "ATTENZIONE !!!"
+dialog_text = "ATTENZIONE !!!
+
+Uscendo perderai tutti i progressi di gioco, continuare ?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinAnimation" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="Prosegui" to="." method="_on_Prosegui_pressed"]
+[connection signal="confirmed" from="GameInfo" to="." method="_on_GameInfo_confirmed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="confirmed" from="Alert" to="." method="_on_Alert_confirmed"]

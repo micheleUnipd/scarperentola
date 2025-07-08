@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://TileSetPiattaforme2.png" type="Texture" id=1]
+[ext_resource path="res://Chiave.gd" type="Script" id=2]
+
+[node name="Chiave" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 57.6665, 26.0972 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 1 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 141, 24, 16, 10 )
+
+[node name="Animation" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true

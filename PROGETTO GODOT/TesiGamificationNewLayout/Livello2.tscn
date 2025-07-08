@@ -1,0 +1,577 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Top_Menu_Bar_Style.tres" type="DynamicFont" id=1]
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Livello2_2.gd" type="Script" id=3]
+[ext_resource path="res://GameInfo.gd" type="Script" id=4]
+[ext_resource path="res://2 - gioco sudoku/scarpa1.png" type="Texture" id=5]
+[ext_resource path="res://Forziere.png" type="Texture" id=6]
+[ext_resource path="res://2 - gioco sudoku/scarpa2.png" type="Texture" id=7]
+[ext_resource path="res://2 - gioco sudoku/scarpa5.png" type="Texture" id=8]
+[ext_resource path="res://2 - gioco sudoku/scarpa3.png" type="Texture" id=9]
+[ext_resource path="res://2 - gioco sudoku/scarpa4.png" type="Texture" id=10]
+[ext_resource path="res://Rettangolo.png" type="Texture" id=11]
+[ext_resource path="res://2 - gioco sudoku/griglia.png" type="Texture" id=12]
+[ext_resource path="res://SfondoLivello2.png" type="Texture" id=13]
+[ext_resource path="res://2 - gioco sudoku/background.png" type="Texture" id=14]
+[ext_resource path="res://0 - main menu/cuore.png" type="Texture" id=15]
+[ext_resource path="res://0 - main menu/moneta.png" type="Texture" id=16]
+[ext_resource path="res://0 - main menu/top_menu_bar.png" type="Texture" id=17]
+[ext_resource path="res://1 - gioco cestino/icona_pausa.png" type="Texture" id=18]
+[ext_resource path="res://1 - gioco cestino/icona_esci.png" type="Texture" id=19]
+[ext_resource path="res://2 - gioco sudoku/icona_verifica.png" type="Texture" id=20]
+[ext_resource path="res://1 - gioco cestino/icona_inizia_intro.png" type="Texture" id=21]
+[ext_resource path="res://1 - gioco cestino/icona_esci_intro.png" type="Texture" id=22]
+[ext_resource path="res://2 - gioco sudoku/intro.png" type="Texture" id=23]
+[ext_resource path="res://2 - gioco sudoku/outro.png" type="Texture" id=24]
+[ext_resource path="res://1 - gioco cestino/icona_continua_outro.png" type="Texture" id=25]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Livello2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 522.223, 318.913 )
+scale = Vector2( 0.427386, 0.34159 )
+texture = ExtResource( 13 )
+
+[node name="SfondoNuovo" type="Sprite" parent="."]
+position = Vector2( 513.087, 302.258 )
+scale = Vector2( 0.64, 0.67 )
+texture = ExtResource( 14 )
+
+[node name="Top_Menu_Bar" type="Sprite" parent="."]
+position = Vector2( 532.576, 54.1766 )
+scale = Vector2( 0.550775, 0.6 )
+texture = ExtResource( 17 )
+
+[node name="Tempo" type="Label" parent="."]
+margin_left = 353.329
+margin_top = 32.3413
+margin_right = 487.329
+margin_bottom = 72.3413
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+text = "15 : 20 : 53"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vita1" type="Sprite" parent="."]
+position = Vector2( 568.329, 50.2819 )
+texture = ExtResource( 15 )
+
+[node name="Vite" type="Label" parent="."]
+margin_left = 598.329
+margin_top = 28.4008
+margin_right = 611.329
+margin_bottom = 63.4008
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.921569, 0.0313726, 0.0313726, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Moneta" type="Sprite" parent="."]
+position = Vector2( 661.661, 50.3968 )
+texture = ExtResource( 16 )
+
+[node name="Monete" type="Label" parent="."]
+margin_left = 691.329
+margin_top = 27.3413
+margin_right = 704.329
+margin_bottom = 62.3413
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.627451, 0.619608, 0.0509804, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 792.079
+margin_top = 27.9206
+margin_right = 900.079
+margin_bottom = 82.9206
+toggle_mode = true
+icon = ExtResource( 19 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 165.538
+margin_top = 27.1409
+margin_right = 273.538
+margin_bottom = 82.1409
+toggle_mode = true
+icon = ExtResource( 18 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Griglia" type="Sprite" parent="."]
+position = Vector2( 513.473, 342.589 )
+scale = Vector2( 2.39369, 1.44187 )
+texture = ExtResource( 12 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 310, 309 )
+
+[node name="Rettangolo_1_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 222, 167 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_1_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 369, 167 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_1_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 516, 167 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_1_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 663, 167 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_1_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 810, 167 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_2_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 222, 255 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_2_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 369, 255 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_2_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 516, 255 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_2_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 663, 255 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_2_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 810, 255 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_3_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 222, 343 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_3_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 369, 343 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_3_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 516, 343 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_3_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 663, 343 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_3_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 810, 343 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_4_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 222, 431 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_4_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 369, 431 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_4_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 516, 431 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_4_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 663, 431 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_4_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 810, 431 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_5_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 222, 519 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_5_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 369, 519 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_5_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 516, 519 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_5_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 663, 519 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Rettangolo_5_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 810, 519 )
+scale = Vector2( 0.292753, 0.169752 )
+texture = ExtResource( 11 )
+
+[node name="Forziere" type="Sprite" parent="."]
+visible = false
+position = Vector2( 986.518, 35.278 )
+scale = Vector2( 0.123, 0.103 )
+texture = ExtResource( 6 )
+
+[node name="Punti" type="Label" parent="."]
+visible = false
+margin_left = 875.462
+margin_top = 16.1542
+margin_right = 913.462
+margin_bottom = 69.1542
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.552941, 0.435294, 0.0235294, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vittoria" type="Label" parent="."]
+visible = false
+margin_left = 58.2778
+margin_top = 136.776
+margin_right = 108.278
+margin_bottom = 541.776
+custom_fonts/font = SubResource( 2 )
+text = "Y
+O
+U
+
+W
+I
+N"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="Button" parent="."]
+visible = false
+margin_left = 8.58533
+margin_top = 52.119
+margin_right = 169.585
+margin_bottom = 113.119
+text = "HOME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sandalo1" type="Sprite" parent="."]
+position = Vector2( 957.698, 122.222 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="Sandalo2" type="Sprite" parent="."]
+position = Vector2( 957.698, 122.222 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="Sandalo3" type="Sprite" parent="."]
+position = Vector2( 957.698, 122.222 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="Sandalo4" type="Sprite" parent="."]
+position = Vector2( 957.698, 122.222 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="Sandalo5" type="Sprite" parent="."]
+position = Vector2( 222, 167 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="Poulaine1" type="Sprite" parent="."]
+position = Vector2( 957.39, 198.005 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+
+[node name="Poulaine2" type="Sprite" parent="."]
+position = Vector2( 957.39, 198.005 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+
+[node name="Poulaine3" type="Sprite" parent="."]
+position = Vector2( 957.39, 198.005 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+
+[node name="Poulaine4" type="Sprite" parent="."]
+position = Vector2( 957.39, 198.005 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+
+[node name="Poulaine5" type="Sprite" parent="."]
+position = Vector2( 663, 431 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 10 )
+
+[node name="Cioppina1" type="Sprite" parent="."]
+position = Vector2( 959.516, 276.605 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="Cioppina2" type="Sprite" parent="."]
+position = Vector2( 959.516, 276.605 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="Cioppina3" type="Sprite" parent="."]
+position = Vector2( 959.516, 276.605 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="Cioppina4" type="Sprite" parent="."]
+position = Vector2( 959.516, 276.605 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="Cioppina5" type="Sprite" parent="."]
+position = Vector2( 810, 255 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="SapraScarpa1" type="Sprite" parent="."]
+position = Vector2( 961.221, 355.957 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="SapraScarpa2" type="Sprite" parent="."]
+position = Vector2( 961.221, 355.957 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="SapraScarpa3" type="Sprite" parent="."]
+position = Vector2( 961.221, 355.957 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="SapraScarpa4" type="Sprite" parent="."]
+position = Vector2( 961.221, 355.957 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="SapraScarpa5" type="Sprite" parent="."]
+position = Vector2( 516, 343 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="Invisibile1" type="Sprite" parent="."]
+position = Vector2( 963.051, 435.477 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="Invisibile2" type="Sprite" parent="."]
+position = Vector2( 963.051, 435.477 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="Invisibile3" type="Sprite" parent="."]
+position = Vector2( 963.051, 435.477 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="Invisibile4" type="Sprite" parent="."]
+position = Vector2( 963.051, 435.477 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="Invisibile5" type="Sprite" parent="."]
+position = Vector2( 369, 519 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="Verifica" type="Button" parent="."]
+margin_left = 891.0
+margin_top = 515.0
+margin_right = 1052.0
+margin_bottom = 596.0
+rect_scale = Vector2( 0.8, 0.8 )
+icon = ExtResource( 20 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameInfo" type="AcceptDialog" parent="."]
+margin_left = 306.995
+margin_top = 164.317
+margin_right = 751.995
+margin_bottom = 406.317
+window_title = "Informazioni sul gioco"
+dialog_text = "Aiuta Scarperentola a risolvere questo enigma.
+Deve posizionare tutte le scarpe all'interno dei riquadri però fai attenzione!
+In ogni riga e in ogni colonna deve essere presente 
+solo una scarpa per tipologia.
+
+BUONA FORTUNA !!!"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerWrong" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
+[node name="Alert" type="ConfirmationDialog" parent="."]
+margin_left = 348.85
+margin_top = 199.649
+margin_right = 719.85
+margin_bottom = 350.649
+window_title = "ATTENZIONE !!!"
+dialog_text = "ATTENZIONE !!!
+
+Uscendo perderai tutti i progressi di gioco, continuare ?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intro" type="WindowDialog" parent="."]
+margin_left = 342.702
+margin_top = 365.86
+margin_right = 651.702
+margin_bottom = 483.86
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Intro"]
+position = Vector2( 132.087, -52.536 )
+texture = ExtResource( 23 )
+
+[node name="Inizia" type="Button" parent="Intro"]
+margin_left = 3.092
+margin_top = 38.0
+margin_right = 125.092
+margin_bottom = 98.0
+action_mode = 0
+icon = ExtResource( 21 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Esci" type="Button" parent="Intro"]
+margin_left = 160.653
+margin_top = 38.0
+margin_right = 282.653
+margin_bottom = 98.0
+action_mode = 0
+icon = ExtResource( 22 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outro" type="WindowDialog" parent="."]
+margin_left = 433.632
+margin_top = 364.98
+margin_right = 592.632
+margin_bottom = 456.98
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Outro"]
+position = Vector2( 79.6947, -50.5107 )
+texture = ExtResource( 24 )
+
+[node name="Continua" type="Button" parent="Outro"]
+margin_left = 19.0818
+margin_top = 10.1022
+margin_right = 141.082
+margin_bottom = 70.1022
+action_mode = 0
+icon = ExtResource( 25 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="Home" to="." method="_on_Home_pressed"]
+[connection signal="pressed" from="Verifica" to="." method="_on_Verifica_pressed"]
+[connection signal="confirmed" from="GameInfo" to="." method="_on_GameInfo_confirmed"]
+[connection signal="confirmed" from="Alert" to="." method="_on_Alert_confirmed"]
+[connection signal="pressed" from="Intro/Inizia" to="." method="_on_Inizia_pressed"]
+[connection signal="pressed" from="Intro/Esci" to="." method="_on_Esci_pressed"]
+[connection signal="pressed" from="Outro/Continua" to="." method="_on_Continua_pressed"]

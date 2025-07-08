@@ -1,0 +1,600 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://0 - main menu/background.png" type="Texture" id=1]
+[ext_resource path="res://IconaLivello5OK.png" type="Texture" id=2]
+[ext_resource path="res://Home.gd" type="Script" id=3]
+[ext_resource path="res://Forziere.png" type="Texture" id=4]
+[ext_resource path="res://0 - main menu/cuore.png" type="Texture" id=5]
+[ext_resource path="res://0 - main menu/tappa_2_ON.png" type="Texture" id=6]
+[ext_resource path="res://0 - main menu/tappa_4_on.png" type="Texture" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=8]
+[ext_resource path="res://0 - main menu/fatina.png" type="Texture" id=9]
+[ext_resource path="res://0 - main menu/tappa_3_on.png" type="Texture" id=10]
+[ext_resource path="res://IconaLivello2OK.png" type="Texture" id=11]
+[ext_resource path="res://0 - main menu/tappa_5_on.png" type="Texture" id=12]
+[ext_resource path="res://IconaLivello4OK.png" type="Texture" id=13]
+[ext_resource path="res://0 - main menu/tappa_1_on.png" type="Texture" id=14]
+[ext_resource path="res://IconaLivello3OK.png" type="Texture" id=15]
+[ext_resource path="res://IconaLivello1OK.png" type="Texture" id=16]
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=17]
+[ext_resource path="res://AlexBrush-Regular.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://Top_Menu_Bar_Style.tres" type="DynamicFont" id=20]
+[ext_resource path="res://LucchettoChiuso.png" type="Texture" id=21]
+[ext_resource path="res://LucchettoAperto.png" type="Texture" id=22]
+[ext_resource path="res://Fata.gd" type="Script" id=24]
+[ext_resource path="res://0 - main menu/tappa_3_attiva.png" type="Texture" id=25]
+[ext_resource path="res://0 - main menu/tappa_4_attiva.png" type="Texture" id=26]
+[ext_resource path="res://0 - main menu/tappa_2_off.png" type="Texture" id=27]
+[ext_resource path="res://0 - main menu/tappa_3_off.png" type="Texture" id=28]
+[ext_resource path="res://0 - main menu/tappa_5_off.png" type="Texture" id=29]
+[ext_resource path="res://0 - main menu/tappa_4_off.png" type="Texture" id=30]
+[ext_resource path="res://0 - main menu/tappa_2_attiva.png" type="Texture" id=31]
+[ext_resource path="res://0 - main menu/tappa_1_off.png" type="Texture" id=32]
+[ext_resource path="res://0 - main menu/tappa_5_attiva.png" type="Texture" id=33]
+[ext_resource path="res://0 - main menu/tappa_1_attiva.png" type="Texture" id=34]
+[ext_resource path="res://0 - main menu/top_menu_bar.png" type="Texture" id=35]
+[ext_resource path="res://0 - main menu/moneta.png" type="Texture" id=36]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 17 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 19 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 17 )
+
+[node name="Home" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+position = Vector2( 511.772, 299.98 )
+scale = Vector2( 0.639101, 0.665473 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Top_Menu_Bar" type="Sprite" parent="."]
+position = Vector2( 681.247, 66.7758 )
+scale = Vector2( 0.550775, 0.6 )
+texture = ExtResource( 35 )
+
+[node name="SfondoLivello1_off" type="Sprite" parent="."]
+position = Vector2( 133.191, 338.924 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 32 )
+
+[node name="SfondoLivello1_active" type="Sprite" parent="."]
+visible = false
+position = Vector2( 133.191, 340.113 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 34 )
+
+[node name="SfondoLivello1" type="Sprite" parent="."]
+position = Vector2( 129.7, 335.089 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="SfondoLivello2_off" type="Sprite" parent="."]
+position = Vector2( 337.735, 349.627 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 27 )
+
+[node name="SfondoLivello2_active" type="Sprite" parent="."]
+visible = false
+position = Vector2( 323.464, 347.059 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 31 )
+
+[node name="SfondoLivello2" type="Sprite" parent="."]
+position = Vector2( 308.773, 352.457 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="SfondoLivello3_off" type="Sprite" parent="."]
+position = Vector2( 504.224, 403.141 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 28 )
+
+[node name="SfondoLivello3_active" type="Sprite" parent="."]
+visible = false
+position = Vector2( 523.846, 409.087 )
+scale = Vector2( 0.79, 0.79 )
+texture = ExtResource( 25 )
+
+[node name="SfondoLivello3" type="Sprite" parent="."]
+position = Vector2( 505.153, 400.417 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="SfondoLivello4_off" type="Sprite" parent="."]
+position = Vector2( 695.829, 331.335 )
+scale = Vector2( 0.785053, 0.782717 )
+texture = ExtResource( 30 )
+
+[node name="SfondoLivello4_active" type="Sprite" parent="."]
+visible = false
+position = Vector2( 713.524, 327.032 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 26 )
+
+[node name="SfondoLivello4" type="Sprite" parent="."]
+position = Vector2( 695.625, 330.866 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="SfondoLivello5_off" type="Sprite" parent="."]
+position = Vector2( 883.581, 381.735 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 29 )
+
+[node name="SfondoLivello5_active" type="Sprite" parent="."]
+visible = false
+position = Vector2( 901.419, 391.249 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 33 )
+
+[node name="SfondoLivello5" type="Sprite" parent="."]
+position = Vector2( 883.532, 381.905 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="IconaLivello1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 99.5834, 153.477 )
+scale = Vector2( 0.231921, 0.267066 )
+texture = ExtResource( 16 )
+
+[node name="IconaLivello2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 291.95, 156.914 )
+scale = Vector2( 0.20559, 0.221955 )
+texture = ExtResource( 11 )
+
+[node name="IconaLivello3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 504.224, 155.725 )
+scale = Vector2( 0.232421, 0.223713 )
+texture = ExtResource( 15 )
+
+[node name="IconaLivello4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 703.416, 152.157 )
+scale = Vector2( 0.246835, 0.295021 )
+texture = ExtResource( 13 )
+
+[node name="IconaLivello5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 914.5, 150.374 )
+scale = Vector2( 0.275029, 0.293683 )
+texture = ExtResource( 2 )
+
+[node name="IniziaLivello1" type="Button" parent="."]
+visible = false
+margin_left = 127.29
+margin_top = 372.339
+margin_right = 182.29
+margin_bottom = 407.339
+text = "INIZIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RigiocaLivello1" type="Button" parent="."]
+visible = false
+margin_left = 54.3304
+margin_top = 538.586
+margin_right = 148.33
+margin_bottom = 581.586
+text = "RIGIOCA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniziaLivello2" type="Button" parent="."]
+visible = false
+margin_left = 327.089
+margin_top = 269.195
+margin_right = 382.089
+margin_bottom = 304.195
+text = "INIZIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RigiocaLivello2" type="Button" parent="."]
+visible = false
+margin_left = 247.215
+margin_top = 540.588
+margin_right = 341.214
+margin_bottom = 583.588
+text = "RIGIOCA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniziaLivello3" type="Button" parent="."]
+visible = false
+margin_left = 521.397
+margin_top = 431.83
+margin_right = 576.397
+margin_bottom = 466.83
+text = "INIZIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RigiocaLivello3" type="Button" parent="."]
+visible = false
+margin_left = 459.454
+margin_top = 539.253
+margin_right = 553.454
+margin_bottom = 582.253
+text = "RIGIOCA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniziaLivello4" type="Button" parent="."]
+visible = false
+margin_left = 712.093
+margin_top = 269.44
+margin_right = 767.093
+margin_bottom = 304.44
+text = "INIZIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RigiocaLivello4" type="Button" parent="."]
+visible = false
+margin_left = 662.35
+margin_top = 537.251
+margin_right = 756.35
+margin_bottom = 580.251
+text = "RIGIOCA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IniziaLivello5" type="Button" parent="."]
+visible = false
+margin_left = 896.544
+margin_top = 411.625
+margin_right = 951.544
+margin_bottom = 446.625
+text = "INIZIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RigiocaLivello5" type="Button" parent="."]
+visible = false
+margin_left = 871.252
+margin_top = 535.916
+margin_right = 965.252
+margin_bottom = 578.916
+text = "RIGIOCA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ricomincia" type="Button" parent="."]
+visible = false
+margin_left = -220.919
+margin_top = 177.813
+margin_right = -114.919
+margin_bottom = 241.813
+text = "RICOMINCIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Forziere" type="Sprite" parent="."]
+visible = false
+position = Vector2( 980.22, 36.3701 )
+scale = Vector2( 0.139069, 0.121493 )
+texture = ExtResource( 4 )
+
+[node name="Vita1" type="Sprite" parent="."]
+position = Vector2( 717, 62.8811 )
+texture = ExtResource( 5 )
+
+[node name="Vita2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 849.102, 107.115 )
+texture = ExtResource( 5 )
+
+[node name="Vita3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 896.923, 107.115 )
+texture = ExtResource( 5 )
+
+[node name="Vita4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 943.872, 107.115 )
+texture = ExtResource( 5 )
+
+[node name="Vita5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 991.319, 107.115 )
+texture = ExtResource( 5 )
+
+[node name="Sbloccato1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 99.98, 502.191 )
+scale = Vector2( 0.0849549, 0.085081 )
+texture = ExtResource( 22 )
+
+[node name="Sbloccato2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 288.554, 503.314 )
+scale = Vector2( 0.0849549, 0.085081 )
+texture = ExtResource( 22 )
+
+[node name="Sbloccato5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 911.52, 497.701 )
+scale = Vector2( 0.0849549, 0.085081 )
+texture = ExtResource( 22 )
+
+[node name="Sbloccato4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 700.497, 499.946 )
+scale = Vector2( 0.0849549, 0.085081 )
+texture = ExtResource( 22 )
+
+[node name="Sbloccato3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 506.311, 504.436 )
+scale = Vector2( 0.0849549, 0.085081 )
+texture = ExtResource( 22 )
+
+[node name="Lucchetto2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 290.832, 503.768 )
+scale = Vector2( 0.0438457, 0.0426698 )
+texture = ExtResource( 21 )
+
+[node name="Lucchetto1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 103.38, 504.89 )
+scale = Vector2( 0.0438457, 0.0426698 )
+texture = ExtResource( 21 )
+
+[node name="Lucchetto3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 505.953, 501.523 )
+scale = Vector2( 0.0438457, 0.0426698 )
+texture = ExtResource( 21 )
+
+[node name="Lucchetto4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 705.33, 498.854 )
+scale = Vector2( 0.0438457, 0.0426698 )
+texture = ExtResource( 21 )
+
+[node name="Lucchetto5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 918.904, 497.519 )
+scale = Vector2( 0.0438457, 0.0426698 )
+texture = ExtResource( 21 )
+
+[node name="Punti" type="Label" parent="."]
+visible = false
+margin_left = 788.361
+margin_top = 19.3393
+margin_right = 914.361
+margin_bottom = 83.3393
+size_flags_horizontal = 3
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.415686, 0.388235, 0.0235294, 1 )
+custom_colors/font_color_shadow = Color( 0.666667, 0.658824, 0.0901961, 1 )
+text = "123"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tempo" type="Label" parent="."]
+margin_left = 502.0
+margin_top = 44.9405
+margin_right = 636.0
+margin_bottom = 84.9405
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+text = "15 : 20 : 53"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Utente" type="Label" parent="."]
+visible = false
+margin_left = 109.249
+margin_top = 83.1738
+margin_right = 252.249
+margin_bottom = 122.174
+custom_fonts/font = SubResource( 2 )
+text = "micheleUnipd"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Livello1" type="Label" parent="."]
+visible = false
+margin_left = 28.0
+margin_top = 397.0
+margin_right = 218.0
+margin_bottom = 426.0
+rect_rotation = -45.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.698039, 0.2, 0.0862745, 1 )
+text = "Livello 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Livello2" type="Label" parent="."]
+visible = false
+margin_left = 216.0
+margin_top = 392.0
+margin_right = 414.0
+margin_bottom = 421.0
+rect_rotation = -45.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.698039, 0.2, 0.0862745, 1 )
+text = "Livello 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Livello3" type="Label" parent="."]
+visible = false
+margin_left = 423.108
+margin_top = 381.339
+margin_right = 621.108
+margin_bottom = 432.339
+rect_rotation = -45.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.698039, 0.2, 0.0862745, 1 )
+text = "Livello 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Livello4" type="Label" parent="."]
+visible = false
+margin_left = 623.226
+margin_top = 386.339
+margin_right = 821.226
+margin_bottom = 415.339
+rect_rotation = -45.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.698039, 0.2, 0.0862745, 1 )
+text = "Livello 4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Livello5" type="Label" parent="."]
+visible = false
+margin_left = 834.131
+margin_top = 378.33
+margin_right = 1032.13
+margin_bottom = 407.33
+rect_rotation = -45.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.698039, 0.2, 0.0862745, 1 )
+text = "Livello 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IconaUser" type="Sprite" parent="."]
+visible = false
+position = Vector2( 176.015, 46.1351 )
+texture = ExtResource( 8 )
+
+[node name="Fata" type="Sprite" parent="."]
+visible = false
+position = Vector2( 307.348, 74.3802 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
+script = ExtResource( 24 )
+
+[node name="ParolaMagica" type="Label" parent="."]
+visible = false
+margin_left = 428.419
+margin_top = 13.8591
+margin_right = 723.419
+margin_bottom = 92.8591
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.686275, 0.0901961, 0.0901961, 1 )
+text = "Per sbloccare i livelli
+dovrai dirmi la parola magica"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Codice" type="LineEdit" parent="."]
+visible = false
+margin_left = 429.379
+margin_top = 126.601
+margin_right = 679.379
+margin_bottom = 156.601
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsaCodice" type="Button" parent="."]
+visible = false
+margin_left = 687.84
+margin_top = 125.928
+margin_right = 721.84
+margin_bottom = 155.929
+text = "VAI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Moneta" type="Sprite" parent="."]
+position = Vector2( 810.332, 62.996 )
+texture = ExtResource( 36 )
+
+[node name="Vite" type="Label" parent="."]
+margin_left = 747.0
+margin_top = 41.0
+margin_right = 760.0
+margin_bottom = 76.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.921569, 0.0313726, 0.0313726, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Monete" type="Label" parent="."]
+margin_left = 840.0
+margin_top = 39.9405
+margin_right = 853.0
+margin_bottom = 74.9405
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.627451, 0.619608, 0.0509804, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Motto" type="Label" parent="."]
+margin_left = 46.8216
+margin_top = 19.2864
+margin_right = 235.822
+margin_bottom = 122.286
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.905882, 0.831373, 0.054902, 1 )
+text = "Scarperentola
+Il gioco !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="IniziaLivello1" to="." method="_on_IniziaLivello1_pressed"]
+[connection signal="pressed" from="RigiocaLivello1" to="." method="_on_RigiocaLivello1_pressed"]
+[connection signal="pressed" from="IniziaLivello2" to="." method="_on_IniziaLivello2_pressed"]
+[connection signal="pressed" from="RigiocaLivello2" to="." method="_on_RigiocaLivello2_pressed"]
+[connection signal="pressed" from="IniziaLivello3" to="." method="_on_IniziaLivello3_pressed"]
+[connection signal="pressed" from="RigiocaLivello3" to="." method="_on_RigiocaLivello3_pressed"]
+[connection signal="pressed" from="IniziaLivello4" to="." method="_on_IniziaLivello4_pressed"]
+[connection signal="pressed" from="RigiocaLivello4" to="." method="_on_RigiocaLivello4_pressed"]
+[connection signal="pressed" from="IniziaLivello5" to="." method="_on_IniziaLivello5_pressed"]
+[connection signal="pressed" from="RigiocaLivello5" to="." method="_on_RigiocaLivello5_pressed"]
+[connection signal="pressed" from="Ricomincia" to="." method="_on_Button_pressed"]
+[connection signal="text_changed" from="Codice" to="." method="_on_Codice_text_changed"]
+[connection signal="pressed" from="UsaCodice" to="." method="_on_UsaCodice_pressed"]

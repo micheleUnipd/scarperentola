@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://font.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Mare.png" type="Texture" id=3]
+[ext_resource path="res://CieloHome.png" type="Texture" id=4]
+[ext_resource path="res://Benvenuto.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Benvenuto" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="SfondoCielo" type="Sprite" parent="."]
+position = Vector2( 510.953, 303.702 )
+scale = Vector2( 0.489625, 0.473493 )
+texture = ExtResource( 4 )
+
+[node name="SfondoMare" type="Sprite" parent="."]
+position = Vector2( 512.404, 301.381 )
+scale = Vector2( 1.5785, 1.1675 )
+texture = ExtResource( 3 )
+
+[node name="Messaggio" type="Label" parent="."]
+margin_left = 24.7179
+margin_top = 251.883
+margin_right = 1010.72
+margin_bottom = 356.883
+custom_fonts/font = SubResource( 1 )
+text = "BENVENUTO IN QUESTA
+MERAVIGLIOSA AVVENTURA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inizia" type="Button" parent="."]
+margin_left = 416.141
+margin_top = 419.012
+margin_right = 609.141
+margin_bottom = 505.012
+custom_fonts/font = SubResource( 2 )
+text = "INIZIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Inizia" to="." method="_on_Inizia_pressed"]

@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://FlappyBird.gd" type="Script" id=1]
+[ext_resource path="res://Livello3(OLD).gd" type="Script" id=2]
+[ext_resource path="res://FlappyBird.png" type="Texture" id=3]
+[ext_resource path="res://Tubo.png" type="Texture" id=4]
+[ext_resource path="res://SfondoLivello3.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 44.731, 131.49 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 47.125, 79.4437 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 48.8992, 121.034 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 48.058, 98.3474 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 37.0636, 26.6376 )
+
+[node name="Livello5" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+position = Vector2( 512.965, 296.848 )
+scale = Vector2( 7.11118, 2.32415 )
+texture = ExtResource( 5 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 201.338, 59.2595 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 134.882, 251.023 )
+rotation = 3.14159
+scale = Vector2( 3.67664, 1.63822 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 134.518, 251.203 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( -167.57, 2.51984 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D4"]
+position = Vector2( 253.676, 356.382 )
+rotation = 3.14159
+scale = Vector2( 3.67664, 0.992985 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 253.118, 356.545 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 396.771, 35.0615 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 207.684, 282.133 )
+rotation = 3.14159
+scale = Vector2( 3.80616, 1.48406 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 207.199, 281.896 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 694.866, -2.37839 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D3"]
+position = Vector2( 152.094, 345.77 )
+rotation = 3.14159
+scale = Vector2( 3.84933, 1.21834 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( 151.503, 345.385 )
+shape = SubResource( 4 )
+
+[node name="FlappyBird" type="KinematicBody2D" parent="."]
+position = Vector2( 5.2973, 95.3517 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TimerMove" type="Timer" parent="FlappyBird"]
+wait_time = 2.814
+one_shot = true
+autostart = true
+
+[node name="FlappyBird" type="Sprite" parent="FlappyBird"]
+position = Vector2( 84.7459, 157.706 )
+scale = Vector2( 0.151577, 0.142807 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FlappyBird"]
+position = Vector2( 83.061, 155.267 )
+shape = SubResource( 5 )

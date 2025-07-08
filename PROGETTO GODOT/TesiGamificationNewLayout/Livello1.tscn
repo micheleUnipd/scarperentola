@@ -1,0 +1,396 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://Cesto2D.gd" type="Script" id=2]
+[ext_resource path="res://UI.gd" type="Script" id=3]
+[ext_resource path="res://Livello1.gd" type="Script" id=4]
+[ext_resource path="res://SegnoX.gd" type="Script" id=5]
+[ext_resource path="res://GameInfo.gd" type="Script" id=6]
+[ext_resource path="res://ScarpaVerde.png" type="Texture" id=7]
+[ext_resource path="res://ScarpaTacco.png" type="Texture" id=8]
+[ext_resource path="res://Forziere.png" type="Texture" id=9]
+[ext_resource path="res://SegnoX.png" type="Texture" id=10]
+[ext_resource path="res://1 - gioco cestino/background.png" type="Texture" id=11]
+[ext_resource path="res://0 - main menu/cuore.png" type="Texture" id=12]
+[ext_resource path="res://1 - gioco cestino/mano.png" type="Texture" id=13]
+[ext_resource path="res://0 - main menu/moneta.png" type="Texture" id=14]
+[ext_resource path="res://0 - main menu/top_menu_bar.png" type="Texture" id=15]
+[ext_resource path="res://Top_Menu_Bar_Style.tres" type="DynamicFont" id=16]
+[ext_resource path="res://1 - gioco cestino/icona_pausa.png" type="Texture" id=17]
+[ext_resource path="res://1 - gioco cestino/icona_esci.png" type="Texture" id=18]
+[ext_resource path="res://1 - gioco cestino/icona_inizia_intro.png" type="Texture" id=19]
+[ext_resource path="res://1 - gioco cestino/icona_esci_intro.png" type="Texture" id=20]
+[ext_resource path="res://1 - gioco cestino/intro.png" type="Texture" id=21]
+[ext_resource path="res://1 - gioco cestino/outro.png" type="Texture" id=22]
+[ext_resource path="res://1 - gioco cestino/icona_continua_outro.png" type="Texture" id=23]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 47.864, 27.4485 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="Livello1" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+position = Vector2( 511.465, 301.19 )
+scale = Vector2( 0.64, 0.67 )
+texture = ExtResource( 11 )
+
+[node name="Forziere" type="Sprite" parent="."]
+visible = false
+position = Vector2( 986.518, 35.278 )
+scale = Vector2( 0.122502, 0.102522 )
+texture = ExtResource( 9 )
+
+[node name="Vita2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 870.45, 103.944 )
+texture = ExtResource( 12 )
+
+[node name="Vita3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 911.873, 103.944 )
+texture = ExtResource( 12 )
+
+[node name="Vita4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 954.299, 103.944 )
+texture = ExtResource( 12 )
+
+[node name="Vita5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 993.897, 103.944 )
+texture = ExtResource( 12 )
+
+[node name="ScarpaRossa" type="Sprite" parent="."]
+visible = false
+position = Vector2( -346.235, 43.223 )
+scale = Vector2( 0.114169, 0.121249 )
+texture = ExtResource( 8 )
+
+[node name="ScarpaVerde" type="Sprite" parent="."]
+visible = false
+position = Vector2( -254.788, 44.1745 )
+scale = Vector2( 0.0264877, 0.0249419 )
+texture = ExtResource( 7 )
+
+[node name="Cesto2D" type="KinematicBody2D" parent="."]
+position = Vector2( -1.05591, -2.74038 )
+collision_layer = 7
+script = ExtResource( 2 )
+
+[node name="Cesto" type="Sprite" parent="Cesto2D"]
+position = Vector2( 516.568, 570.114 )
+scale = Vector2( 0.38, 0.25 )
+texture = ExtResource( 13 )
+
+[node name="RayCast2D1" type="RayCast2D" parent="Cesto2D"]
+position = Vector2( 484.373, 570.468 )
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, -30 )
+collision_mask = 3
+collide_with_areas = true
+
+[node name="RayCast2D2" type="RayCast2D" parent="Cesto2D"]
+position = Vector2( 530.7, 570.913 )
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, -30 )
+collision_mask = 3
+collide_with_areas = true
+
+[node name="RayCast2D3" type="RayCast2D" parent="Cesto2D"]
+position = Vector2( 507.314, 570.691 )
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, -30 )
+collision_mask = 3
+collide_with_areas = true
+
+[node name="RayCast2D4" type="RayCast2D" parent="Cesto2D"]
+position = Vector2( 554.309, 570.914 )
+scale = Vector2( 2, 1 )
+enabled = true
+cast_to = Vector2( 0, -30 )
+collision_mask = 3
+collide_with_areas = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cesto2D"]
+position = Vector2( 516.255, 569.459 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+margin_left = 826.0
+margin_top = 5.0
+margin_right = 927.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Punti" type="Label" parent="UI"]
+visible = false
+margin_left = 828.462
+margin_top = 16.1542
+margin_right = 866.462
+margin_bottom = 69.1542
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.552941, 0.435294, 0.0235294, 1 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLifes" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="SegnoX" type="Sprite" parent="."]
+visible = false
+position = Vector2( -142.128, 243.245 )
+scale = Vector2( 0.118836, 0.0862004 )
+texture = ExtResource( 10 )
+script = ExtResource( 5 )
+
+[node name="TimerX" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="GameOver" type="Label" parent="."]
+visible = false
+margin_left = 336.101
+margin_top = 276.787
+margin_right = 690.101
+margin_bottom = 371.787
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerGameOver" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Home" type="Button" parent="."]
+visible = false
+margin_left = 408.921
+margin_top = 340.141
+margin_right = 622.921
+margin_bottom = 417.141
+text = "HOME"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ricomincia" type="Button" parent="."]
+visible = false
+margin_left = 408.921
+margin_top = 429.595
+margin_right = 622.921
+margin_bottom = 506.595
+text = "RICOMINCIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameInfo" type="AcceptDialog" parent="."]
+margin_left = 306.995
+margin_top = 164.317
+margin_right = 751.995
+margin_bottom = 406.317
+window_title = "Informazioni sul gioco"
+dialog_text = "In questo gioco dovrai raccogliere le scarpe giuste.
+Usa i tasti w a s d per muovere la mano.
+
+Raccogli il maggior numero di scarpe nel minor tempo possibile
+e guadagnerai un sacco di punti.
+
+
+BUONA FORTUNA !!!"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 161.758
+margin_top = 38.4802
+margin_right = 269.758
+margin_bottom = 93.4802
+toggle_mode = true
+icon = ExtResource( 17 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="."]
+margin_left = 782.0
+margin_top = 38.0
+margin_right = 890.0
+margin_bottom = 93.0
+toggle_mode = true
+icon = ExtResource( 18 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Alert" type="ConfirmationDialog" parent="."]
+margin_left = 348.85
+margin_top = 199.649
+margin_right = 719.85
+margin_bottom = 350.649
+window_title = "ATTENZIONE !!!"
+dialog_text = "ATTENZIONE !!!
+
+Uscendo perderai tutti i progressi di gioco, continuare ?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Top_Menu_Bar" type="Sprite" parent="."]
+position = Vector2( 526.571, 66.7758 )
+scale = Vector2( 0.5388, 0.6 )
+texture = ExtResource( 15 )
+
+[node name="Vita1" type="Sprite" parent="."]
+position = Vector2( 572, 65 )
+texture = ExtResource( 12 )
+
+[node name="Tempo" type="Label" parent="."]
+margin_left = 344.492
+margin_top = 44.9405
+margin_right = 478.492
+margin_bottom = 84.9405
+custom_fonts/font = ExtResource( 16 )
+custom_colors/font_color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+text = "15 : 20 : 53"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vite" type="Label" parent="."]
+margin_left = 604.0
+margin_top = 42.0
+margin_right = 617.0
+margin_bottom = 77.0
+custom_fonts/font = ExtResource( 16 )
+custom_colors/font_color = Color( 0.921569, 0.0313726, 0.0313726, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Monete" type="Label" parent="."]
+margin_left = 695.831
+margin_top = 40.7203
+margin_right = 708.831
+margin_bottom = 75.7203
+custom_fonts/font = ExtResource( 16 )
+custom_colors/font_color = Color( 0.627451, 0.619608, 0.0509804, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Moneta" type="Sprite" parent="."]
+position = Vector2( 667.943, 61.7361 )
+texture = ExtResource( 14 )
+
+[node name="Intro" type="WindowDialog" parent="."]
+margin_left = 367.702
+margin_top = 365.86
+margin_right = 676.702
+margin_bottom = 483.86
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Intro"]
+position = Vector2( 157.087, -52.536 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 21 )
+
+[node name="Inizia" type="Button" parent="Intro"]
+margin_left = 23.0
+margin_top = 23.0
+margin_right = 145.0
+margin_bottom = 83.0
+action_mode = 0
+icon = ExtResource( 19 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Esci" type="Button" parent="Intro"]
+margin_left = 173.0
+margin_top = 23.0
+margin_right = 295.0
+margin_bottom = 83.0
+action_mode = 0
+icon = ExtResource( 20 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outro" type="WindowDialog" parent="."]
+margin_left = 433.632
+margin_top = 364.98
+margin_right = 592.632
+margin_bottom = 456.98
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Outro"]
+position = Vector2( 79.6947, -50.5107 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 22 )
+
+[node name="Continua" type="Button" parent="Outro"]
+margin_left = 19.0818
+margin_top = 10.1022
+margin_right = 141.082
+margin_bottom = 70.1022
+icon = ExtResource( 23 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="shoesGreen_taken" from="Cesto2D" to="." method="_on_Cesto2D_shoesGreen_taken"]
+[connection signal="shoesGreen_taken" from="Cesto2D" to="UI" method="_on_Cesto2D_shoesGreen_taken"]
+[connection signal="shoesRed_taken" from="Cesto2D" to="." method="_on_Cesto2D_shoesRed_taken"]
+[connection signal="pressed" from="Home" to="." method="_on_Home_pressed"]
+[connection signal="pressed" from="Ricomincia" to="." method="_on_Ricomincia_pressed"]
+[connection signal="confirmed" from="GameInfo" to="." method="_on_GameInfo_confirmed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_Exit_pressed"]
+[connection signal="confirmed" from="Alert" to="." method="_on_Alert_confirmed"]
+[connection signal="pressed" from="Intro/Inizia" to="." method="_on_Inizia_pressed"]
+[connection signal="pressed" from="Intro/Esci" to="." method="_on_Esci_pressed"]
+[connection signal="pressed" from="Outro/Continua" to="." method="_on_Continua_pressed"]

@@ -1,0 +1,99 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://AlexBrush-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://04B_30__.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://Cornice2.png" type="Texture" id=3]
+[ext_resource path="res://Mare.png" type="Texture" id=4]
+[ext_resource path="res://SfondoLogin.png" type="Texture" id=5]
+[ext_resource path="res://Login.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 1 )
+
+[node name="Login" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="SfondoLogin" type="Sprite" parent="."]
+position = Vector2( 510.964, 302.419 )
+scale = Vector2( 0.361447, 0.376093 )
+texture = ExtResource( 5 )
+
+[node name="Sfondo" type="Sprite" parent="."]
+position = Vector2( 507.748, 245.055 )
+scale = Vector2( 1.00388, 1.03663 )
+texture = ExtResource( 4 )
+
+[node name="Cornice" type="Sprite" parent="."]
+position = Vector2( 519.678, 303.372 )
+scale = Vector2( 0.342776, 0.161602 )
+texture = ExtResource( 3 )
+
+[node name="Accedi" type="Button" parent="."]
+margin_left = 415.691
+margin_top = 383.273
+margin_right = 607.691
+margin_bottom = 451.273
+custom_fonts/font = SubResource( 1 )
+text = "ACCEDI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Registrati" type="Button" parent="."]
+visible = false
+margin_left = 221.853
+margin_top = 410.903
+margin_right = 412.853
+margin_bottom = 481.903
+custom_fonts/font = SubResource( 1 )
+text = "REGISTRATI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="User" type="LineEdit" parent="."]
+margin_left = 541.413
+margin_top = 159.26
+margin_right = 803.413
+margin_bottom = 216.26
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password" type="LineEdit" parent="."]
+margin_left = 541.825
+margin_top = 248.461
+margin_right = 803.825
+margin_bottom = 305.461
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UserLabel" type="Label" parent="."]
+margin_left = 366.451
+margin_top = 140.648
+margin_right = 541.451
+margin_bottom = 240.648
+custom_fonts/font = SubResource( 2 )
+text = "User"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PassLabel" type="Label" parent="."]
+margin_left = 225.15
+margin_top = 227.764
+margin_right = 528.15
+margin_bottom = 327.764
+custom_fonts/font = SubResource( 2 )
+text = "Password"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Accedi" to="." method="_on_Accedi_pressed"]

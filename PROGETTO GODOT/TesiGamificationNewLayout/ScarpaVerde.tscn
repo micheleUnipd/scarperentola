@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ScarpaVerde.gd" type="Script" id=1]
+[ext_resource path="res://1 - gioco cestino/scarpa2.png" type="Texture" id=2]
+[ext_resource path="res://1 - gioco cestino/bolla.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 35.1278, 34.9474 )
+
+[node name="ScarpaVerde" type="RigidBody2D"]
+position = Vector2( 0, 6 )
+mass = 2.0
+linear_velocity = Vector2( 0, 5 )
+angular_velocity = 10.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ScarpaVerde" type="Sprite" parent="."]
+position = Vector2( 35.1661, 28.8439 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 35.1528, 29.3129 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Bolla" type="Sprite" parent="."]
+position = Vector2( 35.5269, 30.8724 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 3 )
